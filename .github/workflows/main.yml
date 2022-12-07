@@ -117,17 +117,17 @@ jobs:
       #     deploymentName: create_role_assignment-${{ env.runNumber }}
       #     failOnStdErr: false
 
-      # - name: Deploy Subscription Placement
-      #   id: create_subscription_placement
-      #   uses: azure/arm-deploy@v1
-      #   with:
-      #     scope: managementgroup
-      #     managementGroupId: ${{ env.ManagementGroupPrefix }}
-      #     region: ${{ env.Location }}
-      #     template: infra-as-code/bicep/modules/subscriptionPlacement/subscriptionPlacement.bicep
-      #     parameters: infra-as-code/bicep/modules/subscriptionPlacement/parameters/subscriptionPlacement.parameters.all.json
-      #     deploymentName: create_subscription_placement-${{ env.runNumber }}
-      #     failOnStdErr: false
+       - name: Deploy Subscription Placement
+         id: create_subscription_placement
+         uses: azure/arm-deploy@v1
+         with:
+           scope: managementgroup
+           managementGroupId: ${{ env.ManagementGroupPrefix }}
+           region: ${{ env.Location }}
+           template: infra-as-code/bicep/modules/subscriptionPlacement/subscriptionPlacement.bicep
+           parameters: infra-as-code/bicep/modules/subscriptionPlacement/parameters/subscriptionPlacement.parameters.all.json
+           deploymentName: create_subscription_placement-${{ env.runNumber }}
+           failOnStdErr: false
 
       # - name: Deploy Default Policy Assignments
       #   id: create_policy_assignments
