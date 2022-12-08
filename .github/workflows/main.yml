@@ -5,7 +5,7 @@ on: [workflow_dispatch]
 env:
   ManagementGroupPrefix: "alz"
   TopLevelManagementGroupDisplayName: "Azure Landing Zones"
-  Location: "eastus"
+  Location: "westeurope"
   LoggingSubId: "8a0979d7-e580-4a1e-8e49-1e7dca99e22d"
   LoggingResourceGroupName: "alz-logging"
   HubNetworkSubId: "cc8fb763-5521-4378-9a91-b22bdf5bcb5a"
