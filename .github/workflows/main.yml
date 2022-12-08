@@ -117,7 +117,7 @@ jobs:
       #     deploymentName: create_role_assignment-${{ env.runNumber }}
       #     failOnStdErr: false
 
-       - name: Deploy Subscription Placement
+        - name: Deploy Subscription Placement
          id: create_subscription_placement
          uses: azure/arm-deploy@v1
          with:
